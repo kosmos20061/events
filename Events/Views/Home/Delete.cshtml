@@ -1,0 +1,27 @@
+﻿@model Events.Models.Event
+
+<h2>Delete Event</h2>
+@using (Html.BeginForm("delete", "home", FormMethod.Post, new { id = "popupForm" }))
+{
+    @Html.HiddenFor(a =>a.EventId)
+    <div class="form-group">
+        <lable>Event Name</lable>
+        <p>@Model.EventName</p>
+    </div>
+    <div class="form-group">
+        <lable>Location Name</lable>
+        <p>@Model.EventLocation</p>
+    </div>
+    <div class="form-group">
+        <lable>Event Start Date</lable>
+        <p>@Model.EventStartDate</p>
+    </div>
+    <div class="form-group">
+        <lable>Event End Date</lable>
+        <p>@Model.EventEndDate</p>
+    </div>
+    <div>
+        <input type="submit" value="Delete"/>
+
+    </div>
+}
